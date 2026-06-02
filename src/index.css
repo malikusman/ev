@@ -31,7 +31,7 @@
 
 body {
   font-family: Inter, sans-serif;
-  @apply bg-slate-100 text-slate-900 antialiased;
+  @apply overflow-x-hidden bg-slate-100 text-slate-900 antialiased;
 }
 
 .recharts-tooltip-wrapper .recharts-default-tooltip {

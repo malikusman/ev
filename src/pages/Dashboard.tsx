@@ -16,7 +16,7 @@ export default function Dashboard() {
     <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2 }} className="space-y-6">
       <div className="rounded-3xl border border-slate-200 bg-gradient-to-r from-slate-900 to-blue-900 p-5 text-white shadow-lg">
         <p className="text-xs font-medium uppercase tracking-wider text-blue-200">Executive Summary · UAE Fleet</p>
-        <p className="mt-2 text-lg font-semibold md:text-xl">
+        <p className="mt-2 text-base font-semibold sm:text-lg md:text-xl">
           AED {executiveSummary.aedSaved.toLocaleString()} saved · {executiveSummary.incidentsPrevented} incidents prevented ·{" "}
           {executiveSummary.autonomousActions} autonomous actions this month
         </p>
@@ -96,12 +96,12 @@ export default function Dashboard() {
           <h3 className="mb-3 font-semibold text-slate-900">Recent Autonomous Actions</h3>
           <div className="space-y-2">
             {alerts.slice(0, 8).map((a) => (
-              <div key={a.id} className="flex items-center justify-between rounded-2xl border border-slate-200 p-3">
+              <div key={a.id} className="flex flex-col gap-3 rounded-2xl border border-slate-200 p-3 sm:flex-row sm:items-center sm:justify-between">
                 <div>
                   <p className="text-sm text-slate-800">{a.time} · {a.chargerId}</p>
                   <p className="text-xs text-slate-500">Autonomous remediation sequence initiated</p>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="flex flex-wrap items-center gap-2">
                   <StatusBadge status={a.severity} />
                   <button className="rounded-lg border border-slate-300 px-2 py-1 text-xs text-slate-700">Approve</button>
                   <button className="rounded-lg border border-slate-300 px-2 py-1 text-xs text-slate-700">View</button>

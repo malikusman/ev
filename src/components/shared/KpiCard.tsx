@@ -33,10 +33,10 @@ export function KpiCard({
     <motion.div
       initial={{ opacity: 0, y: 8 }}
       animate={{ opacity: 1, y: 0 }}
-      className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm"
+      className="rounded-3xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5"
     >
       <p className="text-sm text-slate-500">{title}</p>
-      <p className={`mt-2 text-3xl font-bold ${accent ?? "text-slate-900"}`}>
+      <p className={`mt-2 text-2xl font-bold sm:text-3xl ${accent ?? "text-slate-900"}`}>
         {animateValue && numericValue !== null ? (
           <>
             <AnimatedNumber value={numericValue} />

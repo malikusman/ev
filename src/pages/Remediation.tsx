@@ -103,9 +103,9 @@ export default function Remediation() {
 
       <div className="grid gap-4 xl:grid-cols-2">
         <div className="rounded-3xl border border-slate-200 bg-white p-5">
-          <div className="mb-2 flex items-center justify-between">
+          <div className="mb-2 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
             <h3 className="font-semibold text-slate-900">Remediation Workflow</h3>
-            <span className={`rounded-full px-3 py-1 text-xs ${approved ? "bg-emerald-100 text-emerald-800" : "bg-amber-100 text-amber-800"}`}>
+            <span className={`w-fit rounded-full px-3 py-1 text-xs ${approved ? "bg-emerald-100 text-emerald-800" : "bg-amber-100 text-amber-800"}`}>
               {approved ? "Approved & Executing" : "Human Approval Required"}
             </span>
           </div>
@@ -140,7 +140,7 @@ export default function Remediation() {
               <p className="mt-1 text-xs">Stability check and SLA recovery within 45 minutes</p>
             </div>
           </div>
-          <div className="mt-4 flex gap-2">
+          <div className="mt-4 flex flex-col gap-2 sm:flex-row">
             <button
               disabled={approving || approved}
               onClick={() => {
@@ -152,11 +152,11 @@ export default function Remediation() {
                   toast.success("Remediation approved. Work order #WO-2024-0847 created. Technician dispatched.");
                 }, 2000);
               }}
-              className="rounded-xl bg-blue-700 px-4 py-2 text-white disabled:opacity-60"
+              className="rounded-xl bg-blue-700 px-4 py-2 text-white disabled:opacity-60 sm:flex-1"
             >
               {approving ? "Approving..." : approved ? "Approved" : "Approve Remediation"}
             </button>
-            <button className="rounded-xl border border-slate-300 px-4 py-2">Create Ticket Only</button>
+            <button className="rounded-xl border border-slate-300 px-4 py-2 sm:flex-1">Create Ticket Only</button>
           </div>
         </div>
       </div>

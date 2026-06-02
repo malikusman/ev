@@ -4,7 +4,7 @@ import { sites } from "@/data/sites";
 export default function SiteMap() {
   return (
     <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.2 }} className="space-y-4">
-      <div className="relative h-[520px] overflow-hidden rounded-3xl border border-slate-200 bg-white p-4">
+      <div className="relative h-64 overflow-hidden rounded-3xl border border-slate-200 bg-white p-4 sm:h-80 md:h-[520px]">
         <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full opacity-50">
           <path
             d="M20 75 L30 70 L38 63 L42 57 L50 52 L58 45 L68 43 L75 36 L84 30 L86 24 L78 20 L67 22 L58 18 L49 22 L42 28 L35 33 L30 40 L26 48 L21 57 Z"
